@@ -231,6 +231,13 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# Google Camera
+PRODUCT_PACKAGES += \
+    GoogleCamera
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/GoogleCamera/privapp-permissions-GoogleCamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-GoogleCamera.xml
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \
