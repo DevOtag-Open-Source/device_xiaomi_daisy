@@ -25,5 +25,6 @@ LOCAL_MODULE_OWNER := google
 LOCAL_MODULE_TAGS := optional
 LOCAL_BUILT_MODULE_STEM := package.apk
 LOCAL_SRC_FILES := GoogleCamera.apk
+LOCAL_OVERRIDES_PACKAGES := SnapdragonCamera Snap Camera2
 LOCAL_CERTIFICATE := shared
 include $(BUILD_PREBUILT)
