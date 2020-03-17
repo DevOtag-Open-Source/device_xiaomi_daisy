@@ -115,7 +115,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.print.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.print.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-telephony.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-telephony.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-telephony.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-telephony.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-ims.xml:$(TARGET_COPY_OUT_SYSTEM)/product/etc/permissions/privapp-permissions-ims.xml
 
 # Device Properties
 -include $(LOCAL_PATH)/prop.mk
@@ -233,10 +234,12 @@ PRODUCT_PACKAGES += \
 
 # Google Camera
 PRODUCT_PACKAGES += \
-    GoogleCamera
+    GoogleCamera \
+    GoogleServicesFramework
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/GoogleCamera/privapp-permissions-GoogleCamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-GoogleCamera.xml
+    $(LOCAL_PATH)/GoogleCamera/privapp-permissions-GoogleCamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-GoogleCamera.xml \
+    $(LOCAL_PATH)/GoogleCamera/privapp-permissions-GoogleServicesFramework.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-GoogleServicesFramework.xml
 
 # GPS
 PRODUCT_PACKAGES += \
